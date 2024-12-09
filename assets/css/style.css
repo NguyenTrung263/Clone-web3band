@@ -284,16 +284,16 @@ html {
     line-height: 1.4;
 }
 
-.place-buy-btn {
+.js-place-buy-btn {
     color: #fff;
     background-color: #000;
     text-decoration: none;
     padding: 11px 16px;
     margin-top: 16px;
-    display: inline-block;
+    border: none;
 }
 
-.place-buy-btn:hover {
+.js-place-buy-btn:hover {
     color: #000;
     background-color: #ccc;
 }
@@ -316,13 +316,14 @@ html {
     justify-content: center;
 }
 
+/* show modal */
 .modal.open {
     display: flex;
 }
 
 .modal-container {
     background-color: #fff;
-    width: 900px;
+    width: 800px;
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
@@ -347,11 +348,11 @@ html {
     padding: 16px;
 
 }
-
+ 
 
 /*Modal-header*/
 
-header.modal-hearder {
+header.modal-header {
     background-color: #009688;
     height: 130px;
     display: flex;
@@ -379,7 +380,7 @@ header.modal-hearder {
     margin-bottom: 24px;
 }
 
-#buy-ticket {
+#buy-tickets {
     background-color: #009688;
     border: none;
     color: #fff;
@@ -389,7 +390,7 @@ header.modal-hearder {
     padding: 18px;
 }
 
-#buy-ticket:hover {
+#buy-tickets:hover {
     cursor: pointer;
     opacity: 0.8;
 
