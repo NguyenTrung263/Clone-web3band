@@ -284,7 +284,7 @@ html {
     line-height: 1.4;
 }
 
-.js-place-buy-btn {
+.place-buy-btn {
     color: #fff;
     background-color: #000;
     text-decoration: none;
@@ -293,7 +293,7 @@ html {
     border: none;
 }
 
-.js-place-buy-btn:hover {
+.place-buy-btn:hover {
     color: #000;
     background-color: #ccc;
 }
@@ -327,6 +327,7 @@ html {
     max-width: calc(100% - 32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease 0.5s;
 }
 
 .modal-close {
@@ -380,7 +381,7 @@ header.modal-header {
     margin-bottom: 24px;
 }
 
-#buy-tickets {
+#js-buy-tickets {
     background-color: #009688;
     border: none;
     color: #fff;
@@ -390,7 +391,7 @@ header.modal-header {
     padding: 18px;
 }
 
-#buy-tickets:hover {
+#js-buy-tickets:hover {
     cursor: pointer;
     opacity: 0.8;
 
@@ -404,4 +405,15 @@ header.modal-header {
 
 .modal-footer a {
     color: #2196F3;
+}
+/* Hiệu ứng chạy từ trên xuống modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }

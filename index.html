@@ -82,7 +82,7 @@
                                     <h3 class="place-heading">New York</h3>
                                     <p class="place-time">Fri 27 Nov 2025</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="js-place-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn js-place-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
 
@@ -92,7 +92,7 @@
                                     <h3 class="place-heading">Paris</h3>
                                     <p class="place-time">Sat 28 Nov 2025</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="js-place-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn js-place-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
 
@@ -102,7 +102,7 @@
                                     <h3 class="place-heading">San Francisco</h3>
                                     <p class="place-time">Sun 29 Nov 2025</p>
                                     <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                    <button class="js-place-buy-btn">Buy Tickets</button>
+                                    <button class="place-buy-btn js-place-buy-btn">Buy Tickets</button>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -122,9 +122,9 @@
         </div>
     </div>
 
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal-close">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
 
@@ -139,15 +139,15 @@
                     <i class="ti-shopping-cart"></i>
                     Tickets, $15 per person
                 </label>
-                <input type="text" class="modal-input" placeholder="How many ?">
+                <input type="number" class="modal-input js-ticket-quantity" placeholder="How many ?" min="1">
 
                 <label for="" class="modal-label">
                     <i class="ti-user"></i>
                     Send To
                 </label>
-                <input type="email" class="modal-input" placeholder="Enter email">
+                <input type="email" class="modal-input js-email" placeholder="Enter email">
 
-                <button id="buy-tickets">
+                <button id="js-buy-tickets">
                     Pay <i class="ti-check"></i>
                 </button>
             </div>
@@ -158,18 +158,43 @@
 
         </div>
     </div>
-
+    <!-- Buy ticket -->
     <script>
         const buyBtns = document.querySelectorAll('.js-place-buy-btn')
-        const modal = document.querySelector('modal')
-
+        const modal = document.querySelector('.js-modal')
+        const modalContainer = document.querySelector('.js-modal-container')
+        const modalClose = document.querySelector('.js-modal-close')
+        const payBtn = document.querySelector('#js-buy-tickets')
+        const ticketQuantity = document.querySelector('.js-ticket-quantity') 
+        const emailInput = document.querySelector('.js-email')
+        // Hàm hiển thị modal
         function showBuyTickets() {
-            alert("SHOW")
+            modal.classList.add('open')
         }
-
+        // Hàm ẩn modal
+        function closeBuyTickets(){
+            modal.classList.remove('open')
+        }
+        // Xử lý sự kiện nút pay
+        function handlePay(){
+            if (ticketQuantity.value === '' || emailInput.value === '') { 
+                alert('Vui lòng nhập số vé và địa chỉ email') 
+                showBuyTickets() 
+        } else {
+            alert('Mua vé thành công!')
+            closeBuyTickets() 
+            }
+        }
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
+
+        modalClose.addEventListener('click', closeBuyTickets)
+        payBtn.addEventListener('click', handlePay)
+        modal.addEventListener('click', closeBuyTickets)
+        modalContainer.addEventListener('click', function(event) {
+            event.stopPropagation()
+        })
     </script>
 
 </body>
