@@ -15,6 +15,36 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important; 
+}
+
+.row {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+/* Main */
+
 #main {
 
 }
@@ -237,10 +267,7 @@ html {
 }
 /*Places*/
 .places-list {
-    /* margin-top: 32px;
-    margin-left: -8px;
-    margin-right: -8px; */
-    margin: 32px -8px 0;
+    margin-top: 32px;
     padding-bottom: 42px;
     display: flex;
 }
@@ -296,6 +323,50 @@ html {
 .place-buy-btn:hover {
     color: #000;
     background-color: #ccc;
+}
+
+/* Contact from */
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+    display: flex;
+    
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    
+}
+
+.contact-form .form-submit-btn {
+    font-size: 15px;
+    padding: 10px 16px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    float: right;
+}
+
+.form-submit-btn:hover {
+    background-color: #ccc;
+    border: 1px solid #ccc;
 }
 
 /*Footer section*/
@@ -380,7 +451,7 @@ header.modal-header {
     font-size: 15px;
     margin-bottom: 24px;
 }
-
+/* Pay btn */
 #js-buy-tickets {
     background-color: #009688;
     border: none;
