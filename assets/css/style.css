@@ -66,13 +66,11 @@ html {
 
 #nav, .subnav {
     list-style-type: none;
-
 }
 
 #nav li{
     display: inline-block;
     position: relative;
-
 }
 
 
@@ -288,6 +286,7 @@ html {
 
 .place-img:hover {
     opacity: 0.6;
+    cursor: pointer;
 }
 
 .place-body {
@@ -324,6 +323,7 @@ html {
 .place-buy-btn:hover {
     color: #000;
     background-color: #ccc;
+    cursor: pointer;
 }
 
 /* Contact from */
@@ -369,6 +369,7 @@ html {
 .form-submit-btn:hover {
     background-color: #ccc;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 /* Image map */
@@ -392,6 +393,7 @@ line-height: 1.6;
 }
 .footer-hover:hover {
     opacity: 0.2;
+    cursor: pointer;
 }
 #footer a{
     font-size: 15px;
@@ -416,7 +418,7 @@ line-height: 1.6;
     justify-content: center;
 }
 
-/* show modal */
+/* Show modal */
 .modal.open {
     display: flex;
 }
@@ -452,7 +454,6 @@ line-height: 1.6;
  
 
 /*Modal-header*/
-
 header.modal-header {
     background-color: #009688;
     height: 130px;
@@ -480,6 +481,7 @@ header.modal-header {
     font-size: 15px;
     margin-bottom: 24px;
 }
+
 /* Pay btn */
 #js-buy-tickets {
     background-color: #009688;
@@ -506,6 +508,7 @@ header.modal-header {
 .modal-footer a {
     color: #2196F3;
 }
+
 /* Hiệu ứng chạy từ trên xuống modal */
 @keyframes modalFadeIn {
     from {
